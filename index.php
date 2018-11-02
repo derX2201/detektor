@@ -3,7 +3,7 @@
 include_once("config.php");
 
 
-$result = $dbConn->query("SELECT COUNT(*) as total FROM users");
+$result = $dbConn->query("SELECT COUNT(id) as total FROM users");
 
 $resulttotal = 0;
 
