@@ -30,7 +30,7 @@ if(isset($_POST['editar']))
 	
 	} else {	
 		
-		$sql = "UPDATE motivos_es_gt SET des_motivo=:des_motivo, estado=:estado, tipo=:tipo WHERE motivo=:motivo";
+		$sql = "UPDATE motivos_es_gt SET des_motivo=:desmotivo, estado=:estado, tipo=:tipo WHERE motivo=:motivo";
 		$query = $dbConn->prepare($sql);
 				
 		$query->bindparam(':des_motivo', $desmotivo);
