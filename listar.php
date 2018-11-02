@@ -149,7 +149,7 @@ $result = $dbConn->query("SELECT * FROM motivos_es_gt ORDER BY motivo DESC");
             
         </p>
         
-        <div class="col-lg-4">
+        <div class="col-lg-12">
             <div class="content-box big-box box-shadow panel-box panel-primary">
                 <h4><strong>Lista</strong></h4>
 
