@@ -178,7 +178,7 @@ $result = $dbConn->query("SELECT * FROM motivos_es_gt ORDER BY motivo DESC");
                       echo "<td>".$row['des_motivo']."</td>";
                       echo "<td>".$row['estado']."</td>";
                       echo "<td>".$row['tipo']."</td>";	
-                      echo "<td><a href=\"editar.php?id=$row[id]\">Editar</a> | <a href=\"eliminar.php?id=$row[id]\" onClick=\"return confirm('Desea Eliminar El Siguiente Registro?')\">Eliminar</a></td>";		
+                      echo "<td><a href=\"editar.php?motivo=$row[motivo]\">Editar</a> | <a href=\"eliminar.php?motivo=$row[motivo]\" onClick=\"return confirm('Desea Eliminar El Siguiente Registro?')\">Eliminar</a></td>";		
                     }
                   ?>
         
