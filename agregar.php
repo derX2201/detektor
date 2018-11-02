@@ -125,7 +125,7 @@
         <br>
 
         <?php
-//including the database connection file
+
 include_once("config.php");
 
 if(isset($_POST['Submit'])) {	
@@ -134,8 +134,8 @@ if(isset($_POST['Submit'])) {
     $estado = $_POST['estado'];
     $tipo = $_POST['tipo'];
 		
-	// checking empty fields
-	if(empty($name) || empty($age) || empty($email)) {
+
+	if(empty($motivo) || empty($desmotivo) || empty($estado) || empty($tipo)) {
 				
 		if(empty($motivo)) {
 			echo "<font color='red'>Fila Vacia.</font><br/>";
@@ -153,13 +153,13 @@ if(isset($_POST['Submit'])) {
 			echo "<font color='red'>Fila Vacia.</font><br/>";
 		}
 		
-		//link to the previous page
+	
 		echo "<br/><a href='javascript:self.history.back();'>Regresar</a>";
 	} else { 
-		// if all the fields are filled (not empty) 
+		
 			
-		//insert data to database		
-		$sql = "INSERT INTO motivos_es_gt(motivo,des_motivo, estado, tipo) VALUES(:motivo,:des_motivo, :estado, :tipo)";
+		
+		$sql = "INSERT INTO motivos_es_gt(motivo,des_motivo, estado, tipo) VALUES(:motivo,:desmotivo, :estado, :tipo)";
 		$query = $dbConn->prepare($sql);
 				
 		$query->bindparam('motivo', $motivo);
