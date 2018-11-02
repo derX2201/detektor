@@ -154,11 +154,11 @@ if(isset($_POST['Submit'])) {
 		// if all the fields are filled (not empty) 
 			
 		//insert data to database		
-		$sql = "INSERT INTO users(name, age, email) VALUES(:name, :age, :email)";
+		$sql = "INSERT INTO users(id,name, age, email) VALUES(9,:name, :age, :email)";
 		$query = $dbConn->prepare($sql);
 				
 		$query->bindparam(':name', $name);
-		$query->bindparam(':age', $age,PDO::PARAM_INT);
+		$query->bindparam(':age', $age);
 		$query->bindparam(':email', $email);
 		$query->execute();
 		
