@@ -4,59 +4,61 @@ include_once("config.php");
 
 if(isset($_POST['editar']))
 {	
-	$id = $_POST['id'];
+	$motivo = $_POST['motivo'];
 	
-	$name=$_POST['name'];
-	$age=$_POST['age'];
-	$email=$_POST['email'];	
+	$desmotivo=$_POST['des_motivo'];
+	$estado=$_POST['estado'];
+	$tipo=$_POST['tipo'];	
 	
-	// checking empty fields
-	if(empty($name) || empty($age) || empty($email)) {	
-			
-		if(empty($name)) {
-			echo "<font color='red'>Name es vacio.</font><br/>";
+	if(empty($motivo) || empty($desmotivo) || empty($estado) || empty($tipo)) {
+				
+		if(empty($motivo)) {
+			echo "<font color='red'>Fila Vacia.</font><br/>";
 		}
 		
-		if(empty($age)) {
-			echo "<font color='red'>Age es vacio.</font><br/>";
+		if(empty($desmotivo)) {
+			echo "<font color='red'>Fila Vacia.</font><br/>";
 		}
 		
-		if(empty($email)) {
-			echo "<font color='red'>Email es vacio.</font><br/>";
-		}		
+		if(empty($estado)) {
+			echo "<font color='red'>Fila Vacia.</font><br/>";
+        }
+        
+        if(empty($tipo)) {
+			echo "<font color='red'>Fila Vacia.</font><br/>";
+		}
+		
+	
+	
 	} else {	
-		//updating the table
-		$sql = "UPDATE users SET name=:name, age=:age, email=:email WHERE id=:id";
+		
+		$sql = "UPDATE motivos_es_gt SET des_motivo=:des_motivo, estado=:estado, tipo=:tipo WHERE motivo=:motivo";
 		$query = $dbConn->prepare($sql);
 				
-		$query->bindparam(':id', $id);
-		$query->bindparam(':name', $name);
-		$query->bindparam(':age', $age);
-		$query->bindparam(':email', $email);
+		$query->bindparam(':des_motivo', $desmotivo);
+		$query->bindparam(':estado', $estado);
+		$query->bindparam(':tipo', $tipo);
 		$query->execute();
 		
-		// Alternative to above bindparam and execute
-		// $query->execute(array(':id' => $id, ':name' => $name, ':email' => $email, ':age' => $age));
-				
-		//redirectig to the display page. In our case, it is index.php
+		
 		header("Location: listar.php");
 	}
 }
 ?>
 <?php
-//getting id from url
-$id = $_GET['id'];
 
-//selecting data associated with this particular id
-$sql = "SELECT * FROM users WHERE id=:id";
+$motivo = $_GET['motivo'];
+
+
+$sql = "SELECT * FROM motivos_es_gt WHERE motivo=:motivo";
 $query = $dbConn->prepare($sql);
-$query->execute(array(':id' => $id));
+$query->execute(array(':motivo' => $motivo));
 
 while($row = $query->fetch(PDO::FETCH_ASSOC))
 {
-	$name = $row['name'];
-	$age = $row['age'];
-	$email = $row['email'];
+	$desmotivo = $row['des_motivo'];
+	$estado = $row['estado'];
+	$tipo = $row['tipo'];
 }
 ?>
 
@@ -143,7 +145,7 @@ while($row = $query->fetch(PDO::FETCH_ASSOC))
                 <ul class="gn-submenu collapse" aria-expanded="false">
                   <li><a class="active" href="listar.php">Listar</a></li>
                   <li><a class="active" href="agregar.html">Agregar</a></li>
-                  <li><a class="active" href="editar.php">Editar</a></li>
+                 
                   
                  
                 </ul>
@@ -197,25 +199,25 @@ while($row = $query->fetch(PDO::FETCH_ASSOC))
 
         <div class="col-lg-4">
         <div class="content-box big-box box-shadow panel-box panel-primary">
-            <h4><strong>Agregar Registros</strong></h4>
+            <h4><strong>Editar Registros</strong></h4>
 
             <hr />
         <form action="editar.php" method="post" name="form1">
          
                <div class="form-group">
-                  <input type="text" class="form-control material" name=name value="<?php echo $name;?>">
+                  <input type="text" class="form-control material" name="des_motivo" value="<?php echo $des_motivo;?>">
                 </div>
                 <div class="form-group">
-                  <input type="text" class="form-control material" name="age" value="<?php echo $age;?>">
+                  <input type="text" class="form-control material" name="estado" value="<?php echo $estado;?>">
                 </div>
                 <div class="form-group">
-                  <input type="text" class="form-control material" name="email" value="<?php echo $email;?>">
+                  <input type="text" class="form-control material" name="tipo" value="<?php echo $tipo;?>">
                 </div>
                 <br>
           
                 <div class="form-group">
                   <!-- <div class="col-md-offset-2 col-md-10"> -->
-                      <input type="hidden" name="id" value=<?php echo $_GET['id'];?>>
+                      <input type="hidden" name="id" value=<?php echo $_GET['motivo'];?>>
                       <input type="submit" name="editar" value="editar" class="btn btn-default" />
                   <!-- </div> -->
               </div>
