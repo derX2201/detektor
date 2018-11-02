@@ -3,7 +3,7 @@
 include("config.php");
 
 
-$id = $_GET['motivo'];
+$motivo = $_GET['motivo'];
 
 $sql = "DELETE FROM motivos_es_gt WHERE motivo=:motivo";
 $query = $dbConn->prepare($sql);
