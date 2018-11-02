@@ -157,9 +157,9 @@ if(isset($_POST['Submit'])) {
 		$sql = "INSERT INTO users(name, age, email) VALUES(:name, :age, :email)";
 		$query = $dbConn->prepare($sql);
 				
-		$query->bindparam(':name', $name);
-		$query->bindparam(':age', $age);
-		$query->bindparam(':email', $email);
+		$query->bindparam(':name', $name, PDO::PARAM_LOB);
+		$query->bindparam(':age', $age,PDO::PARAM_INT);
+		$query->bindparam(':email', $email, PDO::PARAM_LOB);
 		$query->execute();
 		
 		// Alternative to above bindparam and execute
