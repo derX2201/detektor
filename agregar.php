@@ -32,18 +32,8 @@
 </head>
 
 <body>
-  <!--Preloader-->
-  <div id="preloader" class="preloader table-wrapper">
-    <div class="table-row">
-      <div class="table-cell">
-        <div class="la-ball-scale-multiple la-3x">
-          <div></div>
-          <div></div>
-          <div></div>
-        </div>
-      </div>
-    </div>
-  </div>
+
+  
 
   <div id="main-wrapper" class="main-wrapper">
 
