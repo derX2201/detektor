@@ -89,9 +89,9 @@ while($row = $result->fetch(PDO::FETCH_ASSOC)) {
                 <a class="search-icon"><i class="fa fa-search"></i><span>Buscar</span></a>
               </li>
               <li class="active">
-                <a href="index.html" aria-expanded="false"><i class="fa fa-th"></i>Estadisticas<span class="fa arrow"></span></a>
+                <a href="index.html" aria-expanded="false"><i class="fa fa-th"></i>Inicio<span class="fa arrow"></span></a>
                 <ul class="gn-submenu collapse" aria-expanded="false">
-                  <li><a class="active" href="index.php">Graficos</a></li>
+                  <li><a class="active" href="index.php">Principal</a></li>
                  
                 </ul>
               </li>
