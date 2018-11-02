@@ -7,8 +7,7 @@ $result = $dbConn->query("SELECT COUNT(*) as total FROM users");
 
 $resulttotal = 0;
 
-
-while($row = $result->fetchAll()) { 	
+while($row = $result->fetchALL(PDO::FETCH_ASSOC)) { 	
     
     $resulttotal = $row['total'];
    
