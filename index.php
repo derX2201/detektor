@@ -3,11 +3,11 @@
 include_once("config.php");
 
 
-$result = $dbConn->query("SELECT id as total FROM users");
+$result = $dbConn->query("SELECT COUNT(*) as total FROM users");
 
 $resulttotal = 0;
 
-while($row = $result->fetchall(PDO::FETCH_ASSOC)) { 	
+while($row = $result->fetch(PDO::FETCH_ASSOC)) { 	
     
     $resulttotal = $row['total'];
    
