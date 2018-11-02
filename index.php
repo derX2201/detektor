@@ -100,7 +100,7 @@ while($row = $result->fetch(PDO::FETCH_ASSOC)) {
                 <ul class="gn-submenu collapse" aria-expanded="false">
                   <li><a class="active" href="listar.php">Listar</a></li>
                   <li><a class="active" href="agregar.html">Agregar</a></li>
-                  <li><a class="active" href="editar.php">Editar</a></li>
+                  
                   
                  
                 </ul>
