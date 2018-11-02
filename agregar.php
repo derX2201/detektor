@@ -137,15 +137,19 @@ if(isset($_POST['Submit'])) {
 	// checking empty fields
 	if(empty($name) || empty($age) || empty($email)) {
 				
-		if(empty($name)) {
+		if(empty($motivo)) {
 			echo "<font color='red'>Fila Vacia.</font><br/>";
 		}
 		
-		if(empty($age)) {
+		if(empty($desmotivo)) {
 			echo "<font color='red'>Fila Vacia.</font><br/>";
 		}
 		
-		if(empty($email)) {
+		if(empty($estado)) {
+			echo "<font color='red'>Fila Vacia.</font><br/>";
+        }
+        
+        if(empty($tipo)) {
 			echo "<font color='red'>Fila Vacia.</font><br/>";
 		}
 		
