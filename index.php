@@ -152,134 +152,21 @@ while($row = $result->fetch(PDO::FETCH_ASSOC)) {
     <!--Contenido Ing. Dennis E. Rodriguez -->
     <div id="content" class="content">
 
-        <div class="row">
-            <div class="col-lg-12">
-                <div class="page-header">
-                    <h2>Graficos</h2>
-                    <ol class="breadcrumb">
-                        <li><a href="index.html">Inicio</a></li>
-                        <li>Estadisticas</li>
-                        <li class="active">Graficos</li>
-                    </ol>
-                </div>
+
+         <div class="col-lg-12">
+          <div class="content-box box-shadow big-box">
+            <div class="jumbotron">
+              <div class="container">
+                <h1>Detektor</h1>
+                <p>Esta es una prueba de programacion realizada por el Ing. Dennis E. Rodriguez favor abrir el menu lateral para ingresar a las diferentes opciones.</p>
+               
+              </div>
             </div>
+          </div>
         </div>
-        <div class="row">
-            <div class="col-md-6">
-                <div class="content-box">
-                    <div class="content-title big-box i-block">
-                        <h4 class="zero-m">Grafico Barras</h4>
-                        <div class="content-tools i-block pull-right">
-                            <a class="repeat-btn">
-                                <i class="fa fa-repeat"></i>
-                            </a>
-                            <a class="dropdown-toggle" data-toggle="dropdown">
-                                <i class="fa fa-chevron-down"></i>
-                            </a>
-                            <ul class="dropdown-menu">
-                                <li><a href="#">Opcion 1</a></li>
-                                <li><a href="#">Opcion 2</a></li>
-                            </ul>
-                            <a class="close-btn">
-                                <i class="fa fa-times"></i>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="clearfix"></div>
-                    <div class="big-box">
-                        <div class="chartjs-container">
-                            <canvas id="chart-bar" height="120"></canvas>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-6">
-                <div class="content-box">
-                    <div class="content-title big-box i-block">
-                        <h4 class="zero-m">Grafico Lineal</h4>
-                        <div class="content-tools i-block pull-right">
-                            <a class="repeat-btn">
-                                <i class="fa fa-repeat"></i>
-                            </a>
-                            <a class="dropdown-toggle" data-toggle="dropdown">
-                                <i class="fa fa-chevron-down"></i>
-                            </a>
-                            <ul class="dropdown-menu">
-                                <li><a href="#">Opcion 1</a></li>
-                                <li><a href="#">Opcion 2</a></li>
-                            </ul>
-                            <a class="close-btn">
-                                <i class="fa fa-times"></i>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="clearfix"></div>
-                    <div class="big-box">
-                        <div class="chartjs-container">
-                            <canvas id="chart-line" height="120"></canvas>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-md-6">
-                <div class="content-box">
-                    <div class="content-title big-box i-block">
-                        <h4 class="zero-m">Grafico Pastel</h4>
-                        <div class="content-tools i-block pull-right">
-                            <a class="repeat-btn">
-                                <i class="fa fa-repeat"></i>
-                            </a>
-                            <a class="dropdown-toggle" data-toggle="dropdown">
-                                <i class="fa fa-chevron-down"></i>
-                            </a>
-                            <ul class="dropdown-menu">
-                                <li><a href="#">Opcion 1</a></li>
-                                <li><a href="#">Opcion 2</a></li>
-                            </ul>
-                            <a class="close-btn">
-                                <i class="fa fa-times"></i>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="clearfix"></div>
-                    <div class="big-box">
-                        <div class="chartjs-container text-center">
-                            <canvas id="chart-pie" height="298"></canvas>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-6">
-                <div class="content-box">
-                    <div class="content-title big-box i-block">
-                        <h4 class="zero-m">Grafico Circular</h4>
-                        <div class="content-tools i-block pull-right">
-                            <a class="repeat-btn">
-                                <i class="fa fa-repeat"></i>
-                            </a>
-                            <a class="dropdown-toggle" data-toggle="dropdown">
-                                <i class="fa fa-chevron-down"></i>
-                            </a>
-                            <ul class="dropdown-menu">
-                                <li><a href="#">Opcion 1</a></li>
-                                <li><a href="#">Opcion 2</a></li>
-                            </ul>
-                            <a class="close-btn">
-                                <i class="fa fa-times"></i>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="clearfix"></div>
-                    <div class="big-box">
-                        <div class="chartjs-container">
-                            <canvas id="chart-doughnut" height="120"></canvas>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
+
+     
+     </div>
     
     
    
