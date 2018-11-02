@@ -7,9 +7,8 @@ $result = $dbConn->query("SELECT COUNT(*) as total FROM users");
 
 $resulttotal = 0;
 
-$result = $sth->fetchAll();
 
-while($row = $result) { 	
+while($row = $result->fetchAll()) { 	
     
     $resulttotal = $row['total'];
    
