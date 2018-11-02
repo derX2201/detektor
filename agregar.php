@@ -129,37 +129,39 @@
 include_once("config.php");
 
 if(isset($_POST['Submit'])) {	
-	$name = $_POST['name'];
-	$age = $_POST['age'];
-	$email = $_POST['email'];
+	$motivo = $_POST['motivo'];
+	$desmotivo = $_POST['des_motivo'];
+    $estado = $_POST['estado'];
+    $tipo = $_POST['tipo'];
 		
 	// checking empty fields
 	if(empty($name) || empty($age) || empty($email)) {
 				
 		if(empty($name)) {
-			echo "<font color='red'>Name field is empty.</font><br/>";
+			echo "<font color='red'>Fila Vacia.</font><br/>";
 		}
 		
 		if(empty($age)) {
-			echo "<font color='red'>Age field is empty.</font><br/>";
+			echo "<font color='red'>Fila Vacia.</font><br/>";
 		}
 		
 		if(empty($email)) {
-			echo "<font color='red'>Email field is empty.</font><br/>";
+			echo "<font color='red'>Fila Vacia.</font><br/>";
 		}
 		
 		//link to the previous page
-		echo "<br/><a href='javascript:self.history.back();'>Go Back</a>";
+		echo "<br/><a href='javascript:self.history.back();'>Regresar</a>";
 	} else { 
 		// if all the fields are filled (not empty) 
 			
 		//insert data to database		
-		$sql = "INSERT INTO users(id,name, age, email) VALUES(9,:name, :age, :email)";
+		$sql = "INSERT INTO motivos_es_gt(motivo,des_motivo, estado, tipo) VALUES(:motivo,:des_motivo, :estado, :tipo)";
 		$query = $dbConn->prepare($sql);
 				
-		$query->bindparam(':name', $name);
-		$query->bindparam(':age', $age);
-		$query->bindparam(':email', $email);
+		$query->bindparam('motivo', $motivo);
+		$query->bindparam(':des_motivo', $desmotivo);
+        $query->bindparam(':estado', $estado);
+        $query->bindparam(':tipo', $tipo);
 		$query->execute();
 		
 		// Alternative to above bindparam and execute
