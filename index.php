@@ -1,8 +1,4 @@
-<?php
 
-
-?>
- 
  
  <!DOCTYPE html>
 <html lang="en" class="no-js">
@@ -136,6 +132,12 @@
 
     <!--Contenido Ing. Dennis E. Rodriguez -->
     <div id="content" class="content">
+
+          <?php
+
+
+          ?>
+ 
 
 
          <div class="col-lg-12">
