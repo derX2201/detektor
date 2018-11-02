@@ -139,6 +139,11 @@ $result = $dbConn->query("SELECT * FROM motivos_es_gt ORDER BY motivo DESC");
       </li>
     </ul>
 
+    <p>
+            <a href="agregar.html">Crear Registro</a>
+            
+        </p>
+
     <!--Contenido Ing. Dennis E. Rodriguez -->
     <div id="content" class="content">
 
