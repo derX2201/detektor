@@ -29,6 +29,9 @@ $result = $dbConn->query("SELECT * FROM motivos_es_gt ORDER BY motivo DESC");
   <link rel="stylesheet" href="js/selects/cs-select.css">
   <link rel="stylesheet" href="js/selects/cs-skin-elastic.css">
 
+  <link rel="stylesheet" href="bower_components/DataTables/media/css/jquery.dataTables.css">
+  <link rel="stylesheet" href="bower_components/datatables-tabletools/css/dataTables.tableTools.css">
+
   <link rel="stylesheet" href="bower_components/c3/c3.min.css">
   <link rel="stylesheet" href="bower_components/zabuto_calendar/zabuto_calendar.min.css">
     <script src="js/menu/modernizr.custom.js"></script>
@@ -293,6 +296,11 @@ $result = $dbConn->query("SELECT * FROM motivos_es_gt ORDER BY motivo DESC");
   <script src="bower_components/Chart.js/Chart.min.js"></script>
   <script src="js/chart-js/example.js"></script>
 
+     <!--Data Tables-->
+     <script src="bower_components/DataTables/media/js/jquery.dataTables.js"></script>
+  <script src="bower_components/datatables.net-responsive/js/dataTables.responsive.js"></script>
+  <script src="bower_components/datatables-tabletools/js/dataTables.tableTools.js"></script>
+
 
   
   <script src="js/common.js"></script>
@@ -316,6 +324,23 @@ $result = $dbConn->query("SELECT * FROM motivos_es_gt ORDER BY motivo DESC");
 
       
       
+    });
+  </script>
+
+
+
+  
+  <script>
+    $(function () {
+      //Data Tables
+      $('#datatable').DataTable({
+        displayLength: 25,
+        dom: 'T<"clear">lfrtip',
+        tableTools: {
+          "sSwfPath": "js/datatables/copy_csv_xls_pdf.swf"
+        },
+        responsive: true
+      });
     });
   </script>
 
