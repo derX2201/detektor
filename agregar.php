@@ -159,7 +159,7 @@ if(isset($_POST['Submit'])) {
 		
 			
 		
-		$sql = "INSERT INTO motivos_es_gt(motivo,des_motivo, estado, tipo) VALUES(:motivo,:desmotivo, :estado, :tipo)";
+		$sql = "INSERT INTO motivos_es_gt(motivo,des_motivo, estado, tipo) VALUES(:motivo,:des_motivo, :estado, :tipo)";
 		$query = $dbConn->prepare($sql);
 				
 		$query->bindparam('motivo', $motivo);
