@@ -152,29 +152,21 @@ $result = $dbConn->query("SELECT * FROM motivos_es_gt ORDER BY motivo DESC");
         <div class="col-lg-4">
             <div class="content-box big-box box-shadow panel-box panel-primary">
                 <h4><strong>Lista</strong></h4>
-        
-                <table class="table">
-                    <tr>
-                        <th>
-                           Motivo
-                        </th>
-                        <th>
-                           DesMotivo
-                        </th>
-                        <th>
-                           Estado
-                        </th>
-                        <th>
-                           Tipo
-                        </th>
-                        <th>
-                           Update 
-                        </th>
-                      
-                        <th></th>
-                    </tr>
 
-                  <?php 	
+        <div class="content-box big-box">
+        <div class="table-responsive">
+          <table id="datatable" class="display">
+            <thead>
+              <tr>
+                <th>Motivo</th>
+                <th>DesMotivo</th>
+                <th>Estado</th>
+                <th>Tipo</th>
+                <th>Update</th>
+              </tr>
+            </thead>
+            <tbody>
+            <?php 	
 	                  while($row = $result->fetch(PDO::FETCH_ASSOC)) { 		
                       echo "<tr>";
                       echo "<td>".$row['motivo']."</td>";
@@ -184,11 +176,12 @@ $result = $dbConn->query("SELECT * FROM motivos_es_gt ORDER BY motivo DESC");
                       echo "<td><a href=\"editar.php?motivo=$row[motivo]\">Editar</a> | <a href=\"eliminar.php?motivo=$row[motivo]\" onClick=\"return confirm('Desea Eliminar El Siguiente Registro?')\">Eliminar</a></td>";		
                     }
                   ?>
+            </tbody>
+          </table>
+        </div>
+      </div>
         
-                  
-        
-                </table>
-        
+              
         
         
         
