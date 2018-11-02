@@ -77,9 +77,19 @@ $result = $dbConn->query("SELECT * FROM users ORDER BY id DESC");
                 <a class="search-icon"><i class="fa fa-search"></i><span>Buscar</span></a>
               </li>
               <li class="active">
-                <a href="index.html" aria-expanded="true"><i class="fa fa-th"></i>Estadisticas<span class="fa arrow"></span></a>
-                <ul class="gn-submenu collapse" aria-expanded="true">
-                  <li><a class="active" href="index.html">Graficos</a></li>
+                <a href="index.html" aria-expanded="false"><i class="fa fa-th"></i>Estadisticas<span class="fa arrow"></span></a>
+                <ul class="gn-submenu collapse" aria-expanded="false">
+                  <li><a class="active" href="index.php">Graficos</a></li>
+                 
+                </ul>
+              </li>
+              <li class="active">
+                <a href="listar.php" aria-expanded="false"><i class="fa fa-desktop"></i>Registros<span class="fa arrow"></span></a>
+                <ul class="gn-submenu collapse" aria-expanded="false">
+                  <li><a class="active" href="listar.php">Listar</a></li>
+                  <li><a class="active" href="agregar.html">Agregar</a></li>
+                  <li><a class="active" href="editar.php">Editar</a></li>
+                  
                  
                 </ul>
               </li>
