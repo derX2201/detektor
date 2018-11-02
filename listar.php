@@ -3,7 +3,7 @@
 include_once("config.php");
 
 
-$result = $dbConn->query("SELECT * FROM users ORDER BY id DESC");
+$result = $dbConn->query("SELECT * FROM motivos_es_gt ORDER BY old DESC");
 ?>
 
 
@@ -153,13 +153,16 @@ $result = $dbConn->query("SELECT * FROM users ORDER BY id DESC");
                 <table class="table">
                     <tr>
                         <th>
-                           Name
+                           Motivo
                         </th>
                         <th>
-                           Age
+                           DesMotivo
                         </th>
                         <th>
-                           Email
+                           Estado
+                        </th>
+                        <th>
+                           Tipo
                         </th>
                         <th>
                            Update 
@@ -171,9 +174,10 @@ $result = $dbConn->query("SELECT * FROM users ORDER BY id DESC");
                   <?php 	
 	                  while($row = $result->fetch(PDO::FETCH_ASSOC)) { 		
                       echo "<tr>";
-                      echo "<td>".$row['name']."</td>";
-                      echo "<td>".$row['age']."</td>";
-                      echo "<td>".$row['email']."</td>";	
+                      echo "<td>".$row['motivo']."</td>";
+                      echo "<td>".$row['des_motivo']."</td>";
+                      echo "<td>".$row['estado']."</td>";
+                      echo "<td>".$row['tipo']."</td>";	
                       echo "<td><a href=\"editar.php?id=$row[id]\">Editar</a> | <a href=\"eliminar.php?id=$row[id]\" onClick=\"return confirm('Desea Eliminar El Siguiente Registro?')\">Eliminar</a></td>";		
                     }
                   ?>
