@@ -10,11 +10,9 @@ if(isset($_POST['editar']))
 	$estado=$_POST['estado'];
 	$tipo=$_POST['tipo'];	
 	
-	if(empty($motivo) || empty($desmotivo) || empty($estado) || empty($tipo)) {
+	if(empty($desmotivo) || empty($estado) || empty($tipo)) {
 				
-		if(empty($motivo)) {
-			echo "<font color='red'>Fila Vacia.</font><br/>";
-		}
+	
 		
 		if(empty($desmotivo)) {
 			echo "<font color='red'>Fila Vacia.</font><br/>";
@@ -205,7 +203,7 @@ while($row = $query->fetch(PDO::FETCH_ASSOC))
         <form action="editar.php" method="post" name="form1">
          
                <div class="form-group">
-                  <input type="text" class="form-control material" name="des_motivo" value="<?php echo $des_motivo;?>">
+                  <input type="text" class="form-control material" name="des_motivo" value="<?php echo $desmotivo;?>">
                 </div>
                 <div class="form-group">
                   <input type="text" class="form-control material" name="estado" value="<?php echo $estado;?>">
@@ -217,7 +215,7 @@ while($row = $query->fetch(PDO::FETCH_ASSOC))
           
                 <div class="form-group">
                   <!-- <div class="col-md-offset-2 col-md-10"> -->
-                      <input type="hidden" name="id" value=<?php echo $_GET['motivo'];?>>
+                      <input type="hidden" name="motivo" value=<?php echo $_GET['motivo'];?>>
                       <input type="submit" name="editar" value="editar" class="btn btn-default" />
                   <!-- </div> -->
               </div>
