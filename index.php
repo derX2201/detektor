@@ -1,20 +1,5 @@
 <?php
 
-include_once("config.php");
-
-
-$result = $dbConn->query("SELECT COUNT(*) as total FROM users");
-
-$resulttotal = 0;
-
-while($row = $result->fetch(PDO::FETCH_ASSOC)) { 	
-    
-    $resulttotal = $row['total'];
-   
-  }
-
-
-
 
 ?>
  
