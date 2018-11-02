@@ -3,7 +3,7 @@
 include_once("config.php");
 
 
-$result = $dbConn->query("SELECT * FROM motivos_es_gt ORDER BY old DESC");
+$result = $dbConn->query("SELECT * FROM motivos_es_gt ORDER BY motivo DESC");
 ?>
 
 
