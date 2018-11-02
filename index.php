@@ -13,7 +13,7 @@ $result = $sth->fetchAll();
 
 $resulttotal = 0;
 
-while($row = $result) { 	
+while($row = $sth->fetch()) { 	
     
     $resulttotal = $row['total'];
    
